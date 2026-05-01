@@ -2,11 +2,12 @@ export const SITE = {
   name: "Niharika Agencies",
   tagline: "Where Quality Meets Service",
   since: 1999,
-  phone: "+91 8411002940",
-  phoneRaw: "918411002940",
+  phone: "+91 94227 74272",
+  phoneRaw: "919422774272",
+  landline: "(0257) 222 5382, 227 2382",
   email: "niharikaagencies99@gmail.com",
   address: "M-148 MIDC, Behind Godavari Engineering College, Jalgaon 425003",
-  contactPerson: "Nihar Jain",
+  contactPersons: ["Vijay Jain", "Nihar Jain"],
   districts: ["Jalgaon", "Dhule", "Nandurbar"],
 };
 
@@ -21,6 +22,7 @@ export const STATS = [
 
 export const BRANDS: { name: string; tag?: string }[] = [
   { name: "Prestige", tag: "Bakers Yeast" },
+  { name: "Butterfly" },
   { name: "McCain" },
   { name: "Mapro" },
   { name: "ACT II" },
@@ -32,7 +34,6 @@ export const BRANDS: { name: string; tag?: string }[] = [
   { name: "Hershey's" },
   { name: "Oddiville", tag: "Foods & Frozen" },
   { name: "Sarwar" },
-  { name: "Butterfly" },
   { name: "Blossom", tag: "International" },
   { name: "Pristine", tag: "Baking Solutions" },
   { name: "Milky Mist" },
@@ -42,6 +43,9 @@ export const BRANDS: { name: string; tag?: string }[] = [
   { name: "Amul" },
   { name: "Britannia" },
   { name: "Cadbury" },
+  { name: "Badshah", tag: "Spices" },
+  { name: "MI Foods" },
+  { name: "Sankalp" },
 ];
 
 import bakery from "@/assets/category-bakery.jpg";
@@ -50,6 +54,41 @@ import frozen from "@/assets/category-frozen.jpg";
 import flavors from "@/assets/category-flavors.jpg";
 import packaging from "@/assets/category-packaging.jpg";
 import dairy from "@/assets/category-dairy.jpg";
+
+const driveView = (id: string) => `https://drive.google.com/file/d/${id}/view`;
+const driveDownload = (id: string) => `https://drive.google.com/uc?export=download&id=${id}`;
+
+export type Brochure = {
+  brand: string;
+  category: string;
+  fileId: string;
+  viewUrl: string;
+  downloadUrl: string;
+  note?: string;
+};
+
+export const BROCHURES: Brochure[] = [
+  { brand: "ACT II", category: "Snacks", fileId: "1_KxutFKgxlEA6cbPDjN1MG8ECtoF_Sig" },
+  { brand: "Badshah", category: "Spices", fileId: "1rOGyV4-v1kLHEKjUDJL1h7l71BlK5w7x" },
+  { brand: "Del Monte", category: "Foods & Beverages", fileId: "1NQF9x4iWnXAxoznSARMd4hb_jlkoHveu" },
+  { brand: "Dr. Oetker FunFoods", category: "Spreads & Sauces", fileId: "1_wY7yYBe4mfSZVL4wx-Fmh__HmFbc1Rj" },
+  { brand: "Dr. Oetker FunFoods", category: "Spreads & Sauces", fileId: "18XieXkB0JcHNRm3ahmiFVSUzA0n2TiU7", note: "Catalogue Vol. 2" },
+  { brand: "Hershey's", category: "Chocolates & Syrups", fileId: "1aexIleZdiA1ko-KhqIXD-GcLGuNAYxAz" },
+  { brand: "Mapro", category: "Syrups & Jams", fileId: "1KNpNeX4n7TiieToT84zADq6ny7JE71Q_" },
+  { brand: "McCain", category: "Frozen Foods", fileId: "1uni-dJ8uZGfh4jdaRJybX9JnIwF4Z0Sz" },
+  { brand: "MI Foods", category: "Frozen / Ready-to-Cook", fileId: "1P0zKuCih0cLXuF1Draqkc8RrkjcWcTxG" },
+  { brand: "Milky Mist", category: "Dairy", fileId: "1mT2lC4k75ucchBWy_amswPKJCXPxk8aO" },
+  { brand: "Oddiville", category: "Foods & Frozen", fileId: "1H44qHfeVe71hIiodxcQ2Ihqm16UFlbku" },
+  { brand: "Pristine", category: "Baking Solutions", fileId: "1qW5qSNuT1EHrxwE5S-Zu8UoGLzT5lnRJ" },
+  { brand: "Cake Decorations & Sprinkles", category: "Bakery Toppings", fileId: "1tDrmbBiLakIpzY-boC5JMm2_atdUIM1a" },
+  { brand: "Rich's", category: "Bakery & Whipping Cream", fileId: "1r1XRVAdqVolU9ilCdiQg4l9V1TEYpkS4" },
+  { brand: "Sankalp", category: "Frozen Foods", fileId: "1zhIMNSNy2g-ig1-LwJy6AcD4AyNHxkc3" },
+  { brand: "Weikfield", category: "Desserts & Mixes", fileId: "1pO8senjyBWAsnHbuG-32_KqDv9-EFtjn" },
+].map((b) => ({
+  ...b,
+  viewUrl: driveView(b.fileId),
+  downloadUrl: driveDownload(b.fileId),
+}));
 
 export type Category = {
   slug: string;
