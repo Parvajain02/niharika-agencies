@@ -3,6 +3,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/data/site";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo-niharika.svg";
 
 const links = [
   { href: "#about", label: "About" },
@@ -35,15 +36,19 @@ export function Navbar() {
     >
       <div className="container flex h-20 items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground font-display text-xl font-bold shadow-card-soft">
-            N<span className="text-accent">a</span>
-          </div>
+          <img
+            src={logo}
+            alt="Niharika Agencies logo"
+            width={44}
+            height={44}
+            className="h-11 w-11 rounded-xl shadow-card-soft"
+          />
           <div className="leading-tight">
-            <div className={cn("font-display text-base font-bold", scrolled ? "text-primary" : "text-background")}>
+            <div className={cn("font-display text-[17px] font-semibold tracking-tight", scrolled ? "text-primary" : "text-background")}>
               {SITE.name}
             </div>
-            <div className={cn("text-[11px] uppercase tracking-widest", scrolled ? "text-muted-foreground" : "text-background/70")}>
-              Since {SITE.since}
+            <div className={cn("text-[10.5px] uppercase tracking-[0.18em] font-medium", scrolled ? "text-muted-foreground" : "text-background/70")}>
+              Est. {SITE.since}
             </div>
           </div>
         </a>
