@@ -55,7 +55,7 @@ export function Contact() {
                 <Phone className="h-5 w-5" />
               </div>
               <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">Call {SITE.contactPerson}</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">Call {SITE.contactPersons.join(" / ")}</div>
                 <div className="text-lg font-semibold text-primary">{SITE.phone}</div>
               </div>
             </a>
