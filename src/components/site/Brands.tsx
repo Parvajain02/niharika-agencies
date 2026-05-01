@@ -9,8 +9,8 @@ export function Brands() {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Brand Partnerships
           </span>
-          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold leading-tight">
-            Trusted by the <span className="text-gold-gradient">brands you love.</span>
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-semibold leading-tight">
+            Trusted by the <span className="text-gold-gradient italic">brands you love.</span>
           </h2>
           <p className="mt-5 text-primary-foreground/75 text-lg">
             Authorized distributor and super stockist for 22+ leading FMCG companies across food, dairy, frozen and bakery categories.
