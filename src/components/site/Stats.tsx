@@ -57,8 +57,8 @@ export function Stats() {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Impact in Numbers
           </span>
-          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold leading-tight">
-            Scale that speaks for <span className="text-gold-gradient">itself.</span>
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-semibold leading-tight">
+            Scale that speaks for <span className="text-gold-gradient italic">itself.</span>
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">

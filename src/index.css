@@ -8,49 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Brand: Deep Navy + Warm Gold + Cream */
-    --background: 40 33% 98%;
-    --foreground: 222 47% 11%;
+    /* Brand palette: Visiting-card Navy + Brand Crimson accent + Champagne Gold + Ivory */
+    --background: 36 38% 97%;
+    --foreground: 222 55% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 222 55% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 222 55% 10%;
 
-    --primary: 222 65% 18%;            /* deep navy */
-    --primary-foreground: 40 33% 98%;
-    --primary-glow: 222 80% 38%;
+    --primary: 222 70% 16%;            /* deep brand navy from card */
+    --primary-foreground: 36 38% 97%;
+    --primary-glow: 222 78% 32%;
 
-    --secondary: 40 30% 94%;           /* warm cream */
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 36 32% 93%;           /* warm ivory */
+    --secondary-foreground: 222 55% 10%;
 
-    --muted: 40 20% 94%;
-    --muted-foreground: 222 14% 40%;
+    --muted: 36 22% 93%;
+    --muted-foreground: 222 14% 38%;
 
-    --accent: 38 80% 52%;              /* warm gold */
-    --accent-foreground: 222 65% 12%;
-    --accent-glow: 42 95% 62%;
+    --accent: 38 72% 48%;              /* refined champagne gold */
+    --accent-foreground: 222 70% 12%;
+    --accent-glow: 42 88% 60%;
+
+    /* Brand crimson (from card "Niharika" wordmark) — subtle accent only */
+    --brand-red: 358 72% 48%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 20% 88%;
-    --input: 222 20% 88%;
-    --ring: 222 65% 18%;
+    --border: 222 18% 88%;
+    --input: 222 18% 88%;
+    --ring: 222 70% 16%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(222 65% 14% / 0.92), hsl(222 75% 22% / 0.78));
+    --gradient-hero: linear-gradient(135deg, hsl(222 70% 12% / 0.95) 0%, hsl(222 60% 20% / 0.78) 55%, hsl(222 40% 18% / 0.55) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
-    --gradient-surface: linear-gradient(180deg, hsl(40 33% 98%), hsl(40 30% 94%));
+    --gradient-gold: linear-gradient(135deg, hsl(38 78% 44%) 0%, hsl(42 90% 60%) 50%, hsl(38 78% 44%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(36 38% 97%), hsl(36 30% 93%));
+    --gradient-radial-gold: radial-gradient(circle at 30% 20%, hsl(38 72% 48% / 0.18), transparent 60%);
 
-    /* Shadows */
-    --shadow-elegant: 0 20px 60px -20px hsl(222 65% 18% / 0.25);
-    --shadow-card: 0 8px 30px -10px hsl(222 50% 20% / 0.12);
-    --shadow-gold: 0 10px 40px -10px hsl(38 80% 52% / 0.45);
+    /* Shadows — layered for premium depth */
+    --shadow-elegant: 0 30px 80px -30px hsl(222 70% 16% / 0.35), 0 8px 24px -12px hsl(222 50% 16% / 0.18);
+    --shadow-card: 0 4px 14px -6px hsl(222 50% 20% / 0.08), 0 12px 36px -16px hsl(222 50% 20% / 0.10);
+    --shadow-gold: 0 12px 40px -12px hsl(38 80% 50% / 0.5), 0 2px 8px -2px hsl(38 80% 40% / 0.3);
+    --shadow-inset-gold: inset 0 1px 0 hsl(42 90% 70% / 0.6);
 
     /* Motion */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -118,13 +123,18 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-family: 'Inter Tight', 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   h1, h2, h3, h4, .font-display {
-    font-family: 'Playfair Display', Georgia, serif;
-    letter-spacing: -0.02em;
+    font-family: 'Fraunces', 'Playfair Display', Georgia, serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.025em;
+    font-feature-settings: 'ss01', 'ss02';
   }
 }
 
@@ -138,6 +148,9 @@ All colors MUST be HSL.
     background-clip: text;
     color: transparent;
   }
+  .text-brand-red { color: hsl(var(--brand-red)); }
+  .bg-brand-red { background-color: hsl(var(--brand-red)); }
+  .bg-radial-gold { background-image: var(--gradient-radial-gold); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .shadow-card-soft { box-shadow: var(--shadow-card); }
   .shadow-gold { box-shadow: var(--shadow-gold); }

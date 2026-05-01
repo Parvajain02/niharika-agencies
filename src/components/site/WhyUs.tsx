@@ -3,11 +3,11 @@ import warehouse from "@/assets/hero-warehouse.jpg";
 
 const reasons = [
   { title: "25+ Years of Reliability", desc: "A proven track record of consistent service since 1999." },
-  { title: "Cold-Chain Expertise", desc: "Purpose-built infrastructure for temperature-sensitive goods." },
+  { title: "Cold Chain Expertise", desc: "Purpose built infrastructure for temperature sensitive goods." },
   { title: "22+ Authorized Brands", desc: "Direct access to India's most loved FMCG companies." },
-  { title: "Hyper-Local Reach", desc: "Daily delivery routes across 3 districts and 300+ retailers." },
-  { title: "Transparent Operations", desc: "GST-compliant invoicing, traceable batches, sealed deliveries." },
-  { title: "Dedicated Account Support", desc: "Personal point-of-contact for every retailer and partner." },
+  { title: "Hyper Local Reach", desc: "Daily delivery routes across 3 districts and 300+ retailers." },
+  { title: "Transparent Operations", desc: "GST compliant invoicing, traceable batches and sealed deliveries." },
+  { title: "Dedicated Account Support", desc: "A personal point of contact for every retailer and partner." },
 ];
 
 export function WhyUs() {
@@ -38,12 +38,12 @@ export function WhyUs() {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Why Choose Us
           </span>
-          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold text-primary leading-tight">
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-semibold text-primary leading-tight">
             The distribution partner <br />
-            <span className="text-gold-gradient">brands rely on.</span>
+            <span className="text-gold-gradient italic">brands rely on.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
-            We don't just move products — we protect brand promises with discipline, infrastructure and human accountability.
+            We don't just move products. We protect brand promises with discipline, infrastructure and human accountability.
           </p>
 
           <ul className="mt-8 space-y-5">

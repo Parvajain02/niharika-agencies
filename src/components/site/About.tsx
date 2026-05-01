@@ -16,15 +16,15 @@ export function About() {
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             About Niharika Agencies
           </span>
-          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold text-primary leading-tight">
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-semibold text-primary leading-[1.05]">
             Built on trust. <br />
-            Scaled by service.
+            <span className="italic font-medium">Scaled by service.</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             From a single distribution route in Jalgaon in 1999 to becoming the region's most trusted super stockist, Niharika Agencies has grown into a backbone for FMCG brands across {SITE.districts.join(", ")}.
           </p>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            We move premium consumer goods — bakery, dairy, frozen, packaging and more — through a precision supply chain designed for speed, freshness, and reliability.
+            We move premium consumer goods across bakery, dairy, frozen and packaging through a precision supply chain designed for speed, freshness and reliability.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">

@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/data/site";
+import logo from "@/assets/logo-niharika.svg";
 
 export function Footer() {
   return (
@@ -7,16 +8,14 @@ export function Footer() {
       <div className="container py-16 grid lg:grid-cols-4 gap-10">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-foreground text-primary font-display text-2xl font-bold">
-              N<span className="text-accent">a</span>
-            </div>
+            <img src={logo} alt="Niharika Agencies logo" width={48} height={48} className="h-12 w-12 rounded-xl bg-primary-foreground/10 p-0.5" />
             <div>
-              <div className="font-display text-xl font-bold">{SITE.name}</div>
-              <div className="text-xs uppercase tracking-widest text-primary-foreground/70">{SITE.tagline} · Since {SITE.since}</div>
+              <div className="font-display text-xl font-semibold tracking-tight">{SITE.name}</div>
+              <div className="text-[11px] uppercase tracking-[0.18em] text-primary-foreground/70 mt-0.5">{SITE.tagline} · Est. {SITE.since}</div>
             </div>
           </div>
           <p className="mt-6 max-w-md text-primary-foreground/75 leading-relaxed">
-            Authorized FMCG distributor and super stockist serving {SITE.districts.join(", ")} with 22+ trusted brands and full cold-chain capabilities.
+            Authorized FMCG distributor and super stockist serving {SITE.districts.join(", ")} with 22+ trusted brands and complete cold chain capabilities.
           </p>
         </div>
 

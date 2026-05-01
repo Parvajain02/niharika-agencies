@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="navy" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F2A5C"/>
+      <stop offset="1" stop-color="#1E4A9C"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E5A93B"/>
+      <stop offset="1" stop-color="#F5C66A"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#navy)"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="url(#gold)" stroke-width="1.2" opacity="0.6"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-weight="700" font-size="34" fill="#FFFFFF" letter-spacing="-1">N</text>
+  <text x="44" y="46" text-anchor="middle" font-family="Cormorant Garamond, Playfair Display, Georgia, serif" font-style="italic" font-weight="600" font-size="20" fill="url(#gold)">a</text>
+</svg>

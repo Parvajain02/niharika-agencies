@@ -10,8 +10,8 @@ export function Brochures() {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Brand Brochures
           </span>
-          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold text-primary leading-tight">
-            Download <span className="text-gold-gradient">official catalogues</span>
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-semibold text-primary leading-tight">
+            Download <span className="text-gold-gradient italic">official catalogues.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
             Browse and download the latest product catalogues from our partner brands. Updated regularly.

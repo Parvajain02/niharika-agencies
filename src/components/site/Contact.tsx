@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
-import { Mail, MapPin, Phone, MessageCircle, Send } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle, Send, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -46,7 +46,7 @@ export function Contact() {
             Let's build a <span className="text-gold-gradient">distribution partnership.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
-            Whether you're a retailer, a brand, or a HoReCa operator — reach out and we'll respond within 24 hours.
+            Whether you are a retailer, a brand, or a HoReCa operator, reach out and we will respond within 24 hours.
           </p>
 
           <div className="mt-10 space-y-5">
@@ -55,17 +55,17 @@ export function Contact() {
                 <Phone className="h-5 w-5" />
               </div>
               <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground">Call {SITE.contactPersons.join(" / ")}</div>
+                <div className="text-xs uppercase tracking-widest text-muted-foreground">Call {SITE.contactPerson}</div>
                 <div className="text-lg font-semibold text-primary">{SITE.phone}</div>
               </div>
             </a>
-            <a href={`https://wa.me/${SITE.phoneRaw}`} target="_blank" rel="noopener" className="flex items-start gap-4 group">
+            <a href={`https://wa.me/${SITE.phoneRaw}`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-card-soft group-hover:bg-gold-gradient group-hover:text-accent-foreground transition-smooth">
                 <MessageCircle className="h-5 w-5" />
               </div>
               <div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">WhatsApp</div>
-                <div className="text-lg font-semibold text-primary">Chat with us instantly</div>
+                <div className="text-lg font-semibold text-primary">{SITE.phone}</div>
               </div>
             </a>
             <a href={`mailto:${SITE.email}`} className="flex items-start gap-4 group">
@@ -77,15 +77,31 @@ export function Contact() {
                 <div className="text-lg font-semibold text-primary break-all">{SITE.email}</div>
               </div>
             </a>
-            <div className="flex items-start gap-4">
+            <a href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-card-soft">
                 <MapPin className="h-5 w-5" />
               </div>
               <div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">Visit Us</div>
                 <div className="text-base font-semibold text-primary leading-snug">{SITE.address}</div>
+                <div className="mt-1 inline-flex items-center gap-1 text-xs font-medium text-accent group-hover:underline">
+                  <Navigation className="h-3 w-3" /> Open in Google Maps
+                </div>
               </div>
-            </div>
+            </a>
+          </div>
+
+          <div className="mt-8 grid grid-cols-2 gap-3">
+            <Button variant="default" size="lg" asChild className="bg-[hsl(142_70%_35%)] hover:bg-[hsl(142_70%_30%)] text-white">
+              <a href={`https://wa.me/${SITE.phoneRaw}?text=${encodeURIComponent("Hi Niharika Agencies, I would like to know more about your distribution services.")}`} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-5 w-5" /> WhatsApp
+              </a>
+            </Button>
+            <Button variant="default" size="lg" asChild>
+              <a href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer">
+                <Navigation className="h-5 w-5" /> Get Directions
+              </a>
+            </Button>
           </div>
         </div>
 

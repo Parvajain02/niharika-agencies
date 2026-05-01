@@ -1,12 +1,12 @@
 import { Truck, Snowflake, Warehouse, ShieldCheck, Users, Clock } from "lucide-react";
 
 const services = [
-  { icon: Warehouse, title: "Super Stockist & Distribution", desc: "Authorized super-stockist for 22+ leading FMCG brands across the region." },
-  { icon: Snowflake, title: "Cold-Chain Logistics", desc: "Temperature-controlled storage & last-mile for dairy and frozen goods." },
-  { icon: Truck, title: "Last-Mile Delivery", desc: "Daily routed deliveries across Jalgaon, Dhule and Nandurbar districts." },
-  { icon: Users, title: "HoReCa Supply", desc: "Specialized supply for hotels, restaurants, cafes and bakeries." },
-  { icon: ShieldCheck, title: "Quality Assurance", desc: "Authentic, brand-sealed products with full FSSAI compliance." },
-  { icon: Clock, title: "On-Time, Every Time", desc: "SLA-driven dispatch ensuring shelves never go empty." },
+  { icon: Warehouse, title: "Super Stockist & Distribution", desc: "Authorized super stockist for 22+ leading FMCG brands across the region." },
+  { icon: Snowflake, title: "Cold Chain Logistics", desc: "Temperature controlled storage and last mile delivery for dairy and frozen goods." },
+  { icon: Truck, title: "Last Mile Delivery", desc: "Daily routed deliveries across Jalgaon, Dhule and Nandurbar districts." },
+  { icon: Users, title: "HoReCa Supply", desc: "Specialised supply for hotels, restaurants, cafes and bakeries." },
+  { icon: ShieldCheck, title: "Quality Assurance", desc: "Authentic, brand sealed products with full FSSAI compliance." },
+  { icon: Clock, title: "On Time, Every Time", desc: "SLA driven dispatch ensuring shelves never go empty." },
 ];
 
 export function Services() {
@@ -17,8 +17,8 @@ export function Services() {
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Our Services
           </span>
-          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold text-primary leading-tight">
-            End-to-end <span className="text-gold-gradient">supply chain solutions.</span>
+          <h2 className="mt-4 font-display text-4xl sm:text-5xl font-semibold text-primary leading-tight">
+            End to end <span className="text-gold-gradient italic">supply chain solutions.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
             From warehouse to retail shelf, we handle every step of consumer goods distribution with precision.

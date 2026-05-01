@@ -18,11 +18,11 @@ export function Catalogue() {
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
               Product Catalogue
             </span>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold text-primary leading-tight">
-              A growing range of <span className="text-gold-gradient">premium FMCG products.</span>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl font-semibold text-primary leading-tight">
+              A growing range of <span className="text-gold-gradient italic">premium FMCG products.</span>
             </h2>
             <p className="mt-5 text-lg text-muted-foreground">
-              Browse curated categories spanning bakery essentials, ice cream raw materials, frozen foods, dairy and more — sourced from authorized brand partners.
+              Browse curated categories spanning bakery essentials, ice cream raw materials, frozen foods and dairy, all sourced from authorized brand partners.
             </p>
           </div>
         </div>

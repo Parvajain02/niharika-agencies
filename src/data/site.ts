@@ -1,13 +1,13 @@
 export const SITE = {
   name: "Niharika Agencies",
-  tagline: "Where Quality Meets Service",
+  tagline: "Superstockists & Stockists for FMCG",
   since: 1999,
-  phone: "+91 94227 74272",
-  phoneRaw: "919422774272",
-  landline: "(0257) 222 5382, 227 2382",
+  phone: "+91 84110 02940",
+  phoneRaw: "918411002940",
   email: "niharikaagencies99@gmail.com",
   address: "M-148 MIDC, Behind Godavari Engineering College, Jalgaon 425003",
-  contactPersons: ["Vijay Jain", "Nihar Jain"],
+  contactPerson: "Nihar Jain",
+  mapsUrl: "https://maps.app.goo.gl/3kq17USNiTt3SQP48",
   districts: ["Jalgaon", "Dhule", "Nandurbar"],
 };
 

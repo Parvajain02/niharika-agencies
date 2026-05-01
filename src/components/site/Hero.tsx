@@ -19,18 +19,18 @@ export function Hero() {
 
       <div className="container relative z-10 pt-28 pb-20">
         <div className="max-w-3xl text-background animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-background/30 bg-background/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] backdrop-blur-md">
+          <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-background/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] backdrop-blur-md">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
-            Authorized FMCG Distributor · Since {SITE.since}
+            Authorized FMCG Distributor · Est. {SITE.since}
           </span>
 
-          <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05]">
+          <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.02]">
             Powering FMCG <br />
-            Distribution at <span className="text-gold-gradient">Scale.</span>
+            Distribution at <span className="text-gold-gradient italic">Scale.</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg sm:text-xl text-background/85 leading-relaxed">
-            Super stockist & authorized distributor for 22+ leading consumer brands across {SITE.districts.join(", ")} — backed by cold-chain logistics and 25+ years of trust.
+          <p className="mt-6 max-w-xl text-lg sm:text-xl text-background/85 leading-relaxed font-light">
+            Super stockist and authorized distributor for 22+ leading consumer brands across {SITE.districts.join(", ")}, backed by cold chain logistics and 25 years of trust.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
