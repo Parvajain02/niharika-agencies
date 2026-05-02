@@ -13,12 +13,12 @@ export const SITE = {
 };
 
 export const STATS = [
-  { value: 25, suffix: "+", label: "Years of Trust" },
+  { value: 3, suffix: "", label: "Districts Covered" },
   { value: 22, suffix: "+", label: "Trusted Brands" },
-  { value: 300, suffix: "+", label: "Retail Partners" },
+  { value: 25, suffix: "+", label: "Years of Trust" },
   { value: 80, suffix: "+", label: "Sub-Distributors" },
   { value: 100, suffix: "+", label: "Bakeries Served" },
-  { value: 3, suffix: "", label: "Districts Covered" },
+  { value: 300, suffix: "+", label: "Retail Partners" },
 ];
 
 export const BRANDS: { name: string; tag?: string }[] = [
