@@ -23,9 +23,8 @@ function StatItem({ value, suffix, label, start }: { value: number; suffix: stri
   const n = useCountUp(value, start);
   return (
     <div className="text-center">
-      <div className="font-display text-5xl sm:text-6xl font-bold text-gold-gradient">
-        {n}
-        {suffix}
+      <div className="font-display text-5xl sm:text-6xl font-bold text-gold-gradient whitespace-nowrap">
+        {n}{suffix}
       </div>
       <div className="mt-3 text-xs sm:text-sm uppercase tracking-[0.2em] text-primary-foreground/75">
         {label}
