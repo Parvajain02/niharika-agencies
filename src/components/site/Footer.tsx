@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/data/site";
-import logo from "@/assets/logo-niharika.svg";
+import logo from "@/assets/logo-niharika.jpeg";
 
 export function Footer() {
   return (
@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container py-16 grid lg:grid-cols-4 gap-10">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="Niharika Agencies logo" width={48} height={48} className="h-12 w-12 rounded-xl bg-primary-foreground/10 p-0.5" />
+            <img src={logo} alt="Niharika Agencies logo" width={48} height={48} className="h-12 w-12 rounded-xl bg-white object-contain p-1" />
             <div>
               <div className="font-display text-xl font-semibold tracking-tight">{SITE.name}</div>
               <div className="text-[11px] uppercase tracking-[0.18em] text-primary-foreground/70 mt-0.5">{SITE.tagline} · Est. {SITE.since}</div>

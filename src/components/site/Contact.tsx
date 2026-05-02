@@ -59,7 +59,7 @@ export function Contact() {
                 <div className="text-lg font-semibold text-primary">{SITE.phone}</div>
               </div>
             </a>
-            <a href={`https://wa.me/${SITE.phoneRaw}`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
+            <a href={`https://wa.me/${SITE.phoneRaw}?text=${encodeURIComponent("Hi Niharika Agencies, I'd like to know more about your distribution services.")}`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-4 group">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-card-soft group-hover:bg-gold-gradient group-hover:text-accent-foreground transition-smooth">
                 <MessageCircle className="h-5 w-5" />
               </div>
@@ -89,6 +89,19 @@ export function Contact() {
                 </div>
               </div>
             </a>
+          </div>
+
+          <div className="mt-8 overflow-hidden rounded-2xl border border-border shadow-card-soft">
+            <iframe
+              title="Niharika Agencies location map"
+              src={SITE.mapsEmbedUrl}
+              width="100%"
+              height="260"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
 
           <div className="mt-8 grid grid-cols-2 gap-3">

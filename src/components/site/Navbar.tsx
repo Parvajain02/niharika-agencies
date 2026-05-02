@@ -3,7 +3,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/data/site";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo-niharika.svg";
+import logo from "@/assets/logo-niharika.jpeg";
 
 const links = [
   { href: "#about", label: "About" },
@@ -41,7 +41,7 @@ export function Navbar() {
             alt="Niharika Agencies logo"
             width={44}
             height={44}
-            className="h-11 w-11 rounded-xl shadow-card-soft"
+            className="h-11 w-11 rounded-xl bg-white object-contain p-1 shadow-card-soft"
           />
           <div className="leading-tight">
             <div className={cn("font-display text-[17px] font-semibold tracking-tight", scrolled ? "text-primary" : "text-background")}>
