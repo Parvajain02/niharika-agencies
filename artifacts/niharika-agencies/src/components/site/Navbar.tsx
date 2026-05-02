@@ -3,7 +3,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/data/site";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo-niharika.jpeg";
+import logo from "@/assets/logo-niharika-color.png";
 
 const links = [
   { href: "#about", label: "About" },

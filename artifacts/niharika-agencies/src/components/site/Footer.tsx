@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/data/site";
-import logo from "@/assets/logo-niharika.jpeg";
+import logo from "@/assets/logo-niharika-color.png";
 
 export function Footer() {
   return (

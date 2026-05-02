@@ -1,7 +1,6 @@
 import { ArrowRight, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-warehouse.jpg";
-import logoColor from "@/assets/logo-niharika-color.png";
 import { SITE } from "@/data/site";
 
 export function Hero() {
@@ -16,17 +15,6 @@ export function Hero() {
           height={1280}
         />
         <div className="absolute inset-0 bg-hero-gradient" />
-        <div className="absolute bottom-6 right-6 z-10 flex items-center gap-3 rounded-xl bg-primary/70 backdrop-blur-sm border border-accent/30 px-4 py-3 shadow-elegant">
-          <img
-            src={logoColor}
-            alt="Niharika Agencies"
-            className="h-12 w-auto object-contain"
-          />
-          <div>
-            <div className="font-display text-sm font-bold text-background leading-tight">Niharika Agencies</div>
-            <div className="text-[10px] uppercase tracking-[0.18em] text-accent mt-0.5">Est. {SITE.since}</div>
-          </div>
-        </div>
       </div>
 
       <div className="container relative z-10 pt-28 pb-20">
