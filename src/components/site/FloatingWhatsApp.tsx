@@ -4,7 +4,7 @@ import { SITE } from "@/data/site";
 export function FloatingWhatsApp() {
   return (
     <a
-      href={`https://wa.me/${SITE.phoneRaw}`}
+      href={`https://wa.me/${SITE.phoneRaw}?text=${encodeURIComponent("Hi Niharika Agencies, I'd like to know more about your distribution services.")}`}
       target="_blank"
       rel="noopener"
       aria-label="Chat with Niharika Agencies on WhatsApp"
