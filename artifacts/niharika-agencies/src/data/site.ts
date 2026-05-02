@@ -39,6 +39,9 @@ import logoPristine from "@/assets/brand-pristine.png";
 import logoMilkyMist from "@/assets/brand-milkymist.png";
 import logoDelMonte from "@/assets/brand-delmonte.png";
 import logoSankalp from "@/assets/brand-sankalp.png";
+import logoBadshah from "@/assets/brand-badshah.png";
+import logoMiFoods from "@/assets/brand-mifoods.png";
+import logoCakeDecorations from "@/assets/brand-cakedecorations.png";
 
 export const BRANDS: { name: string; tag?: string; logo?: string }[] = [
   { name: "Prestige", tag: "Bakers Yeast", logo: logoPrestige },
@@ -58,10 +61,10 @@ export const BRANDS: { name: string; tag?: string; logo?: string }[] = [
   { name: "Pristine", tag: "Baking Solutions", logo: logoPristine },
   { name: "Milky Mist", logo: logoMilkyMist },
   { name: "Del Monte", logo: logoDelMonte },
-  { name: "Hatsun" },
-  { name: "Badshah", tag: "Spices" },
-  { name: "MI Foods" },
+  { name: "Badshah", tag: "Spices", logo: logoBadshah },
+  { name: "MI Foods", logo: logoMiFoods },
   { name: "Sankalp", logo: logoSankalp },
+  { name: "Cake Decorations", tag: "& Sprinkles", logo: logoCakeDecorations },
 ];
 
 export const BRAND_LOGO_MAP: Record<string, string> = Object.fromEntries(
@@ -69,13 +72,16 @@ export const BRAND_LOGO_MAP: Record<string, string> = Object.fromEntries(
 );
 
 export function getBrandLogo(name: string): string | undefined {
-  const key = name.toLowerCase()
+  const lower = name.toLowerCase().trim();
+  if (BRAND_LOGO_MAP[lower]) return BRAND_LOGO_MAP[lower];
+  const stripped = lower
     .replace(/\s+funfoods$/, "")
-    .replace(/\s+foods$/, "")
     .replace(/\s+international$/, "")
     .replace(/\s+baking solutions$/, "")
+    .replace(/\s+spices$/, "")
+    .replace(/\s*&\s*sprinkles$/, "")
     .trim();
-  return BRAND_LOGO_MAP[key] ?? BRAND_LOGO_MAP[name.toLowerCase()];
+  return BRAND_LOGO_MAP[stripped];
 }
 
 import bakery from "@/assets/category-bakery.jpg";
@@ -136,7 +142,7 @@ export const CATEGORIES: Category[] = [
     description: "Premium flours, yeasts, improvers, chocolates and bakery essentials trusted by India's top bakeries.",
     image: bakery,
     items: ["Bakers Yeast", "Cocoa Powder", "Chocolate Compound", "Bread Improvers", "Baking Powder"],
-    brands: ["Prestige", "Butterfly", "Weikfield", "Pristine", "Dr. Oetker", "Hershey's"],
+    brands: ["Prestige", "Butterfly", "Weikfield", "Pristine", "Dr. Oetker", "Hershey's", "Cake Decorations"],
   },
   {
     slug: "icecream",
@@ -152,7 +158,7 @@ export const CATEGORIES: Category[] = [
     description: "End-to-end cold-chain handling for frozen snacks, vegetables and ready-to-cook QSR essentials.",
     image: frozen,
     items: ["French Fries", "Frozen Snacks", "Frozen Veg", "QSR Range", "Ready-to-Cook"],
-    brands: ["McCain", "Safal", "Sankalp", "Oddiville"],
+    brands: ["McCain", "Safal", "Sankalp", "Oddiville", "MI Foods"],
   },
   {
     slug: "flavors",
@@ -160,7 +166,7 @@ export const CATEGORIES: Category[] = [
     description: "Vibrant food-grade colors, syrups and concentrated flavours for bakery, beverage and dessert use.",
     image: flavors,
     items: ["Food Colors", "Essences", "Syrups", "Mocktail Bases", "Concentrates"],
-    brands: ["Mapro", "Blossom", "Sarwar", "Del Monte"],
+    brands: ["Mapro", "Blossom", "Sarwar", "Del Monte", "Badshah"],
   },
   {
     slug: "packaging",

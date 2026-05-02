@@ -25,25 +25,25 @@ export function Brands() {
           {loop.map((b, i) => (
             <div
               key={`${b.name}-${i}`}
-              className="shrink-0 min-w-[200px] rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 backdrop-blur-sm px-6 py-5 flex flex-col items-center gap-3 transition-smooth hover:border-accent/60 hover:bg-primary-foreground/10"
+              className="shrink-0 w-[180px] rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 backdrop-blur-sm px-4 py-4 flex flex-col items-center gap-3 transition-smooth hover:border-accent/60 hover:bg-primary-foreground/10"
             >
               {b.logo ? (
-                <div className="h-12 w-full flex items-center justify-center">
+                <div className="h-14 w-full flex items-center justify-center rounded-lg bg-white px-2 py-1.5">
                   <img
                     src={b.logo}
                     alt={`${b.name} logo`}
-                    className="max-h-12 max-w-[120px] w-auto object-contain brightness-0 invert"
+                    className="max-h-10 max-w-[130px] w-auto h-auto object-contain"
                   />
                 </div>
               ) : (
-                <div className="h-12 w-12 rounded-full bg-primary-foreground/10 flex items-center justify-center text-xl font-bold font-display text-accent">
+                <div className="h-14 w-14 rounded-full bg-primary-foreground/10 flex items-center justify-center text-xl font-bold font-display text-accent">
                   {b.name[0]}
                 </div>
               )}
               <div className="text-center">
-                <div className="font-display text-base font-bold tracking-tight">{b.name}</div>
+                <div className="font-display text-sm font-bold tracking-tight leading-tight">{b.name}</div>
                 {b.tag && (
-                  <div className="mt-0.5 text-[10px] uppercase tracking-[0.2em] text-primary-foreground/60">
+                  <div className="mt-0.5 text-[10px] uppercase tracking-[0.15em] text-primary-foreground/60">
                     {b.tag}
                   </div>
                 )}
