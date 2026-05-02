@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import warehouse from "@/assets/hero-warehouse.jpg";
+import trustedDistricts from "@/assets/trusted-districts.png";
 
 const reasons = [
   { title: "25+ Years of Reliability", desc: "A proven track record of consistent service since 1999." },
@@ -15,18 +15,13 @@ export function WhyUs() {
     <section id="why" className="py-24 sm:py-32 bg-background">
       <div className="container grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative order-2 lg:order-1">
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elegant">
+          <div className="relative rounded-2xl overflow-hidden shadow-elegant bg-white">
             <img
-              src={warehouse}
-              alt="Niharika Agencies distribution operations"
+              src={trustedDistricts}
+              alt="Trusted across 3 districts — Jalgaon, Dhule, Nandurbar"
               loading="lazy"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent" />
-            <div className="absolute bottom-8 left-8 right-8 text-background">
-              <div className="font-display text-3xl font-bold">Trusted across 3 districts</div>
-              <div className="mt-2 text-sm text-background/80">Jalgaon · Dhule · Nandurbar</div>
-            </div>
           </div>
           <div className="absolute -top-6 -right-6 hidden md:block bg-gold-gradient rounded-2xl p-6 shadow-gold w-44 text-accent-foreground">
             <div className="font-display text-4xl font-bold">99%</div>
