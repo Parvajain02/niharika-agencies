@@ -22,7 +22,7 @@ function useCountUp(target: number, start: boolean, duration = 1500) {
 function StatItem({ value, suffix, label, start }: { value: number; suffix: string; label: string; start: boolean }) {
   const n = useCountUp(value, start);
   return (
-    <div className="text-center">
+    <div className="text-left">
       <div className="font-display text-5xl sm:text-6xl font-bold text-gold-gradient whitespace-nowrap">
         {n}{suffix}
       </div>
@@ -46,8 +46,8 @@ export function Stats() {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-24 bg-primary text-primary-foreground overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.04]" style={{
+    <section ref={ref} className="relative py-24 bg-primary text-primary-foreground">
+      <div className="absolute inset-0 overflow-hidden opacity-[0.04]" style={{
         backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--primary-foreground)) 1px, transparent 0)",
         backgroundSize: "32px 32px",
       }} />
