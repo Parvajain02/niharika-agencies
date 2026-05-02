@@ -21,9 +21,12 @@ export const STATS = [
   { value: 300, suffix: "+", label: "Retail Partners" },
 ];
 
-export const BRANDS: { name: string; tag?: string }[] = [
-  { name: "Prestige", tag: "Bakers Yeast" },
-  { name: "Butterfly" },
+import logoPrestige from "@/assets/brand-prestige.jpg";
+import logoButterfly from "@/assets/brand-butterfly.jpeg";
+
+export const BRANDS: { name: string; tag?: string; logo?: string }[] = [
+  { name: "Prestige", tag: "Bakers Yeast", logo: logoPrestige },
+  { name: "Butterfly", logo: logoButterfly },
   { name: "McCain" },
   { name: "Mapro" },
   { name: "ACT II" },
@@ -40,10 +43,6 @@ export const BRANDS: { name: string; tag?: string }[] = [
   { name: "Milky Mist" },
   { name: "Del Monte" },
   { name: "Hatsun" },
-  { name: "Vadilal" },
-  { name: "Amul" },
-  { name: "Britannia" },
-  { name: "Cadbury" },
   { name: "Badshah", tag: "Spices" },
   { name: "MI Foods" },
   { name: "Sankalp" },

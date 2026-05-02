@@ -25,14 +25,29 @@ export function Brands() {
           {loop.map((b, i) => (
             <div
               key={`${b.name}-${i}`}
-              className="shrink-0 min-w-[200px] rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 backdrop-blur-sm px-6 py-5 text-center transition-smooth hover:border-accent/60 hover:bg-primary-foreground/10"
+              className="shrink-0 min-w-[200px] rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 backdrop-blur-sm px-6 py-5 flex flex-col items-center gap-3 transition-smooth hover:border-accent/60 hover:bg-primary-foreground/10"
             >
-              <div className="font-display text-xl font-bold tracking-tight">{b.name}</div>
-              {b.tag && (
-                <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-primary-foreground/60">
-                  {b.tag}
+              {b.logo ? (
+                <div className="h-12 w-full flex items-center justify-center">
+                  <img
+                    src={b.logo}
+                    alt={`${b.name} logo`}
+                    className="max-h-12 max-w-[120px] w-auto object-contain brightness-0 invert"
+                  />
+                </div>
+              ) : (
+                <div className="h-12 w-12 rounded-full bg-primary-foreground/10 flex items-center justify-center text-xl font-bold font-display text-accent">
+                  {b.name[0]}
                 </div>
               )}
+              <div className="text-center">
+                <div className="font-display text-base font-bold tracking-tight">{b.name}</div>
+                {b.tag && (
+                  <div className="mt-0.5 text-[10px] uppercase tracking-[0.2em] text-primary-foreground/60">
+                    {b.tag}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
