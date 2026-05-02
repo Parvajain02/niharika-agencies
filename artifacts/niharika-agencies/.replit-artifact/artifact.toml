@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Niharika Agencies"
+version = "1.0.0"
+id = "artifacts/niharika-agencies"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23339
+
+[services.development]
+run = "pnpm --filter @workspace/niharika-agencies run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/niharika-agencies", "run", "build" ]
+publicDir = "artifacts/niharika-agencies/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23339"
+BASE_PATH = "/"
