@@ -1,19 +1,6 @@
-import { BROCHURES, BRANDS } from "@/data/site";
+import { BROCHURES, getBrandLogo } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { Download, ExternalLink, FileText } from "lucide-react";
-
-const logoMap: Record<string, string> = Object.fromEntries(
-  BRANDS.filter((b) => b.logo).map((b) => [b.name.toLowerCase(), b.logo!])
-);
-
-function getBrandLogo(brandName: string): string | undefined {
-  const key = brandName.toLowerCase().replace(/\s+funfoods$/, "").replace(/\s+foods$/, "").trim();
-  return (
-    logoMap[key] ||
-    logoMap[brandName.toLowerCase()] ||
-    undefined
-  );
-}
 
 export function Brochures() {
   return (

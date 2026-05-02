@@ -1,8 +1,37 @@
 import { useState } from "react";
-import { CATEGORIES } from "@/data/site";
+import { CATEGORIES, getBrandLogo } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+function BrandLogoStrip({ brands }: { brands: string[] }) {
+  if (!brands.length) return null;
+  return (
+    <div className="mt-4 pt-4 border-t border-border flex flex-wrap items-center gap-2">
+      <span className="text-[10px] uppercase tracking-[0.15em] text-muted-foreground mr-1">Brands:</span>
+      {brands.map((name) => {
+        const logo = getBrandLogo(name);
+        return logo ? (
+          <div key={name} className="h-7 w-14 flex items-center justify-center">
+            <img
+              src={logo}
+              alt={name}
+              title={name}
+              className="max-h-7 max-w-[56px] w-auto object-contain"
+            />
+          </div>
+        ) : (
+          <span
+            key={name}
+            className="rounded-full bg-primary/8 border border-border px-2.5 py-0.5 text-[10px] font-semibold text-primary"
+          >
+            {name}
+          </span>
+        );
+      })}
+    </div>
+  );
+}
 
 export function Catalogue() {
   const [active, setActive] = useState<string>("all");
@@ -71,9 +100,10 @@ export function Catalogue() {
                     </span>
                   ))}
                 </div>
+                <BrandLogoStrip brands={c.brands} />
                 <a
                   href="#contact"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:text-accent transition-smooth"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:text-accent transition-smooth"
                 >
                   Request catalogue <ArrowRight className="h-4 w-4 transition-smooth group-hover:translate-x-1" />
                 </a>

@@ -23,30 +23,60 @@ export const STATS = [
 
 import logoPrestige from "@/assets/brand-prestige.jpg";
 import logoButterfly from "@/assets/brand-butterfly.jpeg";
+import logoMccain from "@/assets/brand-mccain.png";
+import logoMapro from "@/assets/brand-mapro.jpeg";
+import logoActii from "@/assets/brand-actii.png";
+import logoWeikfield from "@/assets/brand-weikfield.jpeg";
+import logoSafal from "@/assets/brand-safal.png";
+import logoDrOetker from "@/assets/brand-droetker.png";
+import logoRichs from "@/assets/brand-richs.png";
+import logoGowardhan from "@/assets/brand-gowardhan.jpeg";
+import logoHersheys from "@/assets/brand-hersheys.jpeg";
+import logoOddiville from "@/assets/brand-oddiville.png";
+import logoSarwar from "@/assets/brand-sarwar.png";
+import logoBlossom from "@/assets/brand-blossom.png";
+import logoPristine from "@/assets/brand-pristine.png";
+import logoMilkyMist from "@/assets/brand-milkymist.png";
+import logoDelMonte from "@/assets/brand-delmonte.png";
+import logoSankalp from "@/assets/brand-sankalp.png";
 
 export const BRANDS: { name: string; tag?: string; logo?: string }[] = [
   { name: "Prestige", tag: "Bakers Yeast", logo: logoPrestige },
   { name: "Butterfly", logo: logoButterfly },
-  { name: "McCain" },
-  { name: "Mapro" },
-  { name: "ACT II" },
-  { name: "Weikfield", tag: "Since 1956" },
-  { name: "Safal" },
-  { name: "Dr. Oetker", tag: "FunFoods" },
-  { name: "Rich's" },
-  { name: "Gowardhan" },
-  { name: "Hershey's" },
-  { name: "Oddiville", tag: "Foods & Frozen" },
-  { name: "Sarwar" },
-  { name: "Blossom", tag: "International" },
-  { name: "Pristine", tag: "Baking Solutions" },
-  { name: "Milky Mist" },
-  { name: "Del Monte" },
+  { name: "McCain", logo: logoMccain },
+  { name: "Mapro", logo: logoMapro },
+  { name: "ACT II", logo: logoActii },
+  { name: "Weikfield", tag: "Since 1956", logo: logoWeikfield },
+  { name: "Safal", logo: logoSafal },
+  { name: "Dr. Oetker", tag: "FunFoods", logo: logoDrOetker },
+  { name: "Rich's", logo: logoRichs },
+  { name: "Gowardhan", logo: logoGowardhan },
+  { name: "Hershey's", logo: logoHersheys },
+  { name: "Oddiville", tag: "Foods & Frozen", logo: logoOddiville },
+  { name: "Sarwar", logo: logoSarwar },
+  { name: "Blossom", tag: "International", logo: logoBlossom },
+  { name: "Pristine", tag: "Baking Solutions", logo: logoPristine },
+  { name: "Milky Mist", logo: logoMilkyMist },
+  { name: "Del Monte", logo: logoDelMonte },
   { name: "Hatsun" },
   { name: "Badshah", tag: "Spices" },
   { name: "MI Foods" },
-  { name: "Sankalp" },
+  { name: "Sankalp", logo: logoSankalp },
 ];
+
+export const BRAND_LOGO_MAP: Record<string, string> = Object.fromEntries(
+  BRANDS.filter((b) => b.logo).map((b) => [b.name.toLowerCase(), b.logo!])
+);
+
+export function getBrandLogo(name: string): string | undefined {
+  const key = name.toLowerCase()
+    .replace(/\s+funfoods$/, "")
+    .replace(/\s+foods$/, "")
+    .replace(/\s+international$/, "")
+    .replace(/\s+baking solutions$/, "")
+    .trim();
+  return BRAND_LOGO_MAP[key] ?? BRAND_LOGO_MAP[name.toLowerCase()];
+}
 
 import bakery from "@/assets/category-bakery.jpg";
 import icecream from "@/assets/category-icecream.jpg";
@@ -96,6 +126,7 @@ export type Category = {
   description: string;
   image: string;
   items: string[];
+  brands: string[];
 };
 
 export const CATEGORIES: Category[] = [
@@ -105,6 +136,7 @@ export const CATEGORIES: Category[] = [
     description: "Premium flours, yeasts, improvers, chocolates and bakery essentials trusted by India's top bakeries.",
     image: bakery,
     items: ["Bakers Yeast", "Cocoa Powder", "Chocolate Compound", "Bread Improvers", "Baking Powder"],
+    brands: ["Prestige", "Butterfly", "Weikfield", "Pristine", "Dr. Oetker", "Hershey's"],
   },
   {
     slug: "icecream",
@@ -112,6 +144,7 @@ export const CATEGORIES: Category[] = [
     description: "Stabilizers, emulsifiers, dairy bases and premium toppings for artisanal and commercial ice cream.",
     image: icecream,
     items: ["Stabilizers", "Emulsifiers", "Cones & Wafers", "Sundae Toppings", "Premix Bases"],
+    brands: ["Milky Mist", "Gowardhan", "Rich's", "Mapro"],
   },
   {
     slug: "frozen",
@@ -119,6 +152,7 @@ export const CATEGORIES: Category[] = [
     description: "End-to-end cold-chain handling for frozen snacks, vegetables and ready-to-cook QSR essentials.",
     image: frozen,
     items: ["French Fries", "Frozen Snacks", "Frozen Veg", "QSR Range", "Ready-to-Cook"],
+    brands: ["McCain", "Safal", "Sankalp", "Oddiville"],
   },
   {
     slug: "flavors",
@@ -126,6 +160,7 @@ export const CATEGORIES: Category[] = [
     description: "Vibrant food-grade colors, syrups and concentrated flavours for bakery, beverage and dessert use.",
     image: flavors,
     items: ["Food Colors", "Essences", "Syrups", "Mocktail Bases", "Concentrates"],
+    brands: ["Mapro", "Blossom", "Sarwar", "Del Monte"],
   },
   {
     slug: "packaging",
@@ -133,6 +168,7 @@ export const CATEGORIES: Category[] = [
     description: "Food-grade packaging — boxes, bags, containers and disposables for bakeries, cafes and restaurants.",
     image: packaging,
     items: ["Bakery Boxes", "Paper Bags", "Containers", "Cake Boards", "Disposables"],
+    brands: ["Blossom"],
   },
   {
     slug: "dairy",
@@ -140,5 +176,6 @@ export const CATEGORIES: Category[] = [
     description: "Cold-chain protected dairy — fresh cream, cheese, butter and milk-based ingredients for HoReCa.",
     image: dairy,
     items: ["Whipping Cream", "Butter", "Cheese", "Condensed Milk", "Dairy Premix"],
+    brands: ["Milky Mist", "Gowardhan", "Rich's"],
   },
 ];
