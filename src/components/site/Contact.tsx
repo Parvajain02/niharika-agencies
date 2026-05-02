@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 import { SITE } from "@/data/site";
+import { supabase } from "@/integrations/supabase/client";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(100),
@@ -20,9 +21,10 @@ const schema = z.object({
 export function Contact() {
   const [loading, setLoading] = useState(false);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const data = Object.fromEntries(fd.entries()) as Record<string, string>;
     const parsed = schema.safeParse(data);
     if (!parsed.success) {
@@ -30,11 +32,50 @@ export function Contact() {
       return;
     }
     setLoading(true);
-    const text = `New Partnership Inquiry%0A%0A*Name:* ${encodeURIComponent(parsed.data.name)}%0A*Business:* ${encodeURIComponent(parsed.data.business || "-")}%0A*Phone:* ${encodeURIComponent(parsed.data.phone)}%0A*Email:* ${encodeURIComponent(parsed.data.email)}%0A*Interest:* ${encodeURIComponent(parsed.data.interest || "-")}%0A*Message:* ${encodeURIComponent(parsed.data.message)}`;
-    window.open(`https://wa.me/${SITE.phoneRaw}?text=${text}`, "_blank", "noopener");
-    toast({ title: "Opening WhatsApp", description: "Your inquiry is ready to send." });
+
+    // 1. Save to backend
+    const { error } = await supabase.from("contact_submissions").insert({
+      name: parsed.data.name,
+      business: parsed.data.business || null,
+      phone: parsed.data.phone,
+      email: parsed.data.email,
+      interest: parsed.data.interest || null,
+      message: parsed.data.message,
+    });
+
+    if (error) {
+      console.error("Submission failed", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly on WhatsApp.",
+        variant: "destructive",
+      });
+      setLoading(false);
+      return;
+    }
+
+    // 2. Auto-send WhatsApp notification to the business
+    const lines = [
+      "*New Partnership Inquiry — Niharika Agencies*",
+      "",
+      `*Name:* ${parsed.data.name}`,
+      `*Business:* ${parsed.data.business || "-"}`,
+      `*Phone:* ${parsed.data.phone}`,
+      `*Email:* ${parsed.data.email}`,
+      `*Interest:* ${parsed.data.interest || "-"}`,
+      "",
+      `*Message:*`,
+      parsed.data.message,
+    ];
+    const text = encodeURIComponent(lines.join("\n"));
+    window.open(`https://wa.me/${SITE.phoneRaw}?text=${text}`, "_blank", "noopener,noreferrer");
+
+    toast({
+      title: "Inquiry sent successfully",
+      description: "We've received your details and a WhatsApp message has been prepared for our team.",
+    });
+    form.reset();
     setLoading(false);
-    e.currentTarget.reset();
   }
 
   return (
