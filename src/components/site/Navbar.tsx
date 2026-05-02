@@ -34,7 +34,7 @@ export function Navbar() {
           : "bg-transparent",
       )}
     >
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container flex h-20 items-center justify-between bg-inherit">
         <a href="#top" className="flex items-center gap-3">
           <img
             src={logo}

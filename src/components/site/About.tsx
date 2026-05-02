@@ -37,8 +37,8 @@ export function About() {
             <div className="h-12 w-px bg-border" />
             <div className="flex items-center gap-3">
               <div className="font-display text-5xl font-bold text-gold-gradient">3</div>
-              <div className="text-sm uppercase tracking-widest text-muted-foreground leading-tight">
-                Districts <br /> covered daily
+              <div className="text-[10px] sm:text-xs uppercase tracking-[0.2em] font-bold text-muted-foreground leading-tight">
+                DISTRICTS <br /> COVERED
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-warehouse.jpg";
 import { SITE } from "@/data/site";
@@ -20,7 +20,7 @@ export function Hero() {
       <div className="container relative z-10 pt-28 pb-20">
         <div className="max-w-3xl text-background animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-background/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] backdrop-blur-md">
-            <Sparkles className="h-3.5 w-3.5 text-accent" />
+            <BadgeCheck className="h-3.5 w-3.5 text-accent" />
             Authorized FMCG Distributor · Est. {SITE.since}
           </span>
 
