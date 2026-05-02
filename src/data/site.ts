@@ -7,7 +7,8 @@ export const SITE = {
   email: "niharikaagencies99@gmail.com",
   address: "M-148 MIDC, Behind Godavari Engineering College, Jalgaon 425003",
   contactPerson: "Nihar Jain",
-  mapsUrl: "https://maps.app.goo.gl/3kq17USNiTt3SQP48",
+  mapsUrl: "https://maps.app.goo.gl/tJM2W82izNMSpVra6",
+  mapsEmbedUrl: "https://www.google.com/maps?q=Niharika+Agencies+M-148+MIDC+Jalgaon&output=embed",
   districts: ["Jalgaon", "Dhule", "Nandurbar"],
 };
 
