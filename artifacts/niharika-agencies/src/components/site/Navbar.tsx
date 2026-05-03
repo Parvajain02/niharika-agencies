@@ -31,7 +31,7 @@ export function Navbar() {
         "fixed inset-x-0 top-0 z-50 transition-smooth",
         scrolled
           ? "bg-background/85 backdrop-blur-xl border-b border-border shadow-card-soft"
-          : "bg-transparent",
+          : "bg-white/30 backdrop-blur-sm",
       )}
     >
       <div className="container flex h-20 items-center justify-between bg-inherit">
@@ -60,7 +60,7 @@ export function Navbar() {
               href={l.href}
               className={cn(
                 "text-sm font-medium transition-smooth hover:text-accent",
-                scrolled ? "text-foreground" : "text-background/90",
+                scrolled ? "text-foreground" : "text-primary",
               )}
             >
               {l.label}
@@ -69,7 +69,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
-          <a href={`tel:${SITE.phoneRaw}`} className={cn("flex items-center gap-2 text-sm font-medium", scrolled ? "text-foreground" : "text-background")}>
+          <a href={`tel:${SITE.phoneRaw}`} className={cn("flex items-center gap-2 text-sm font-medium", scrolled ? "text-foreground" : "text-primary")}>
             <Phone className="h-4 w-4" /> {SITE.phone}
           </a>
           <Button variant="hero" size="default" asChild>
@@ -78,7 +78,7 @@ export function Navbar() {
         </div>
 
         <button
-          className={cn("lg:hidden p-2 rounded-md", scrolled ? "text-foreground" : "text-background")}
+          className={cn("lg:hidden p-2 rounded-md", scrolled ? "text-foreground" : "text-primary")}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
