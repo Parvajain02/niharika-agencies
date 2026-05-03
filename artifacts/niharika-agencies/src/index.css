@@ -16,8 +16,10 @@ div[style*="position:fixed"][style*="z-index:9999"] {
   pointer-events: none !important;
 }
 
-html {
+html, body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 @layer base {

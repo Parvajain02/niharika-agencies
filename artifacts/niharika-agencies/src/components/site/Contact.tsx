@@ -185,14 +185,23 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-5">
+          <div className="mt-8">
             <Button type="submit" variant="default" size="lg" disabled={loading} className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
               <Send className="h-4 w-4" />
               {loading ? "Sending..." : "Send Inquiry"}
             </Button>
-            <div className="text-lg sm:text-xl font-display font-semibold text-primary/90 leading-tight max-w-md">
-              Looking forward to connecting with you and building something lasting together.
-            </div>
+          </div>
+
+          <div className="mt-10 pt-10 border-t border-border">
+            <p className="font-display text-3xl sm:text-4xl font-semibold text-primary leading-tight">
+              Your shelf,
+            </p>
+            <p className="font-display text-3xl sm:text-4xl font-semibold text-gold-gradient italic leading-tight">
+              our commitment.
+            </p>
+            <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-sm">
+              Every inquiry is the start of a partnership. We respond within 24 hours and are ready to deliver from day one.
+            </p>
           </div>
         </form>
       </div>

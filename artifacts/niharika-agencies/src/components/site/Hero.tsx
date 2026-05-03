@@ -1,27 +1,38 @@
 import { ArrowRight, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-warehouse.jpg";
+import heroDesktop from "@/assets/hero-warehouse.jpg";
+import heroMobile from "@/assets/hero-warehouse-mobile.png";
 import { SITE } from "@/data/site";
 
 export function Hero() {
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
+        {/* Portrait image — mobile & tablet (< 1024px) */}
         <img
-          src={heroImg}
+          src={heroMobile}
+          alt="Niharika Agencies FMCG distribution warehouse"
+          className="block lg:hidden h-full w-full object-cover object-center"
+        />
+        {/* Landscape image — desktop (≥ 1024px) */}
+        <img
+          src={heroDesktop}
           alt="Niharika Agencies FMCG distribution warehouse in Jalgaon"
-          className="hero-image h-full w-full object-cover object-right sm:object-center"
+          className="hidden lg:block h-full w-full object-cover object-center"
           width={1920}
           height={1280}
         />
+
+        {/* Mobile overlay — gradient from top so text stays readable */}
         <div
-          className="absolute inset-0 sm:hidden"
+          className="absolute inset-0 lg:hidden"
           style={{
             background:
-              "linear-gradient(to bottom, hsl(36 38% 97% / 0.97) 0%, hsl(36 38% 97% / 0.92) 42%, hsl(36 38% 97% / 0.58) 76%, hsl(36 38% 97% / 0.26) 100%)",
+              "linear-gradient(to bottom, hsl(36 38% 97% / 0.97) 0%, hsl(36 38% 97% / 0.92) 40%, hsl(36 38% 97% / 0.55) 72%, hsl(36 38% 97% / 0.22) 100%)",
           }}
         />
-        <div className="absolute inset-0 hidden sm:block bg-hero-gradient" />
+        {/* Desktop overlay — gradient from left */}
+        <div className="absolute inset-0 hidden lg:block bg-hero-gradient" />
       </div>
 
       <div className="container relative z-10 pt-28 pb-20">
