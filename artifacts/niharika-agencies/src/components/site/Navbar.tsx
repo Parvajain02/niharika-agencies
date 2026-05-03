@@ -44,10 +44,10 @@ export function Navbar() {
             className="h-11 w-11 rounded-xl bg-white object-contain p-1 shadow-card-soft"
           />
           <div className="leading-tight">
-            <div className={cn("font-display text-[17px] font-semibold tracking-tight", scrolled ? "text-primary" : "text-background")}>
+            <div className={cn("font-display text-[17px] font-semibold tracking-tight", "text-primary")}>
               {SITE.name}
             </div>
-            <div className={cn("text-[10.5px] uppercase tracking-[0.18em] font-medium", scrolled ? "text-muted-foreground" : "text-background/70")}>
+            <div className={cn("text-[10.5px] uppercase tracking-[0.18em] font-medium", "text-muted-foreground")}>
               Est. {SITE.since}
             </div>
           </div>
