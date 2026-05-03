@@ -200,7 +200,7 @@ export function Contact() {
               our commitment.
             </p>
             <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-sm">
-              Every inquiry is the start of a partnership. We respond within 24 hours and are ready to deliver from day one.
+              Every great partnership begins with a single conversation we're looking forward to yours.
             </p>
           </div>
         </form>
