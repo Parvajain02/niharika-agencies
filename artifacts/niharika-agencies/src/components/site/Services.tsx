@@ -29,7 +29,7 @@ export function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="group relative rounded-2xl bg-card border border-border p-8 shadow-card-soft transition-smooth hover:-translate-y-1 hover:shadow-elegant overflow-hidden"
+              className="group relative rounded-2xl bg-card border border-border p-8 shadow-card-soft overflow-hidden"
             >
               <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gold-gradient opacity-0 group-hover:opacity-20 transition-smooth" />
               <div className="relative">

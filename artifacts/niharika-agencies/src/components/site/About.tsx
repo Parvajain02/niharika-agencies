@@ -49,10 +49,10 @@ export function About() {
           {points.map((p, i) => (
             <div
               key={p.title}
-              className="group rounded-2xl border border-border bg-card p-6 shadow-card-soft transition-smooth hover:-translate-y-1 hover:shadow-elegant"
+              className="rounded-2xl border border-border bg-card p-6 shadow-card-soft"
               style={{ animationDelay: `${i * 80}ms` }}
             >
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/5 text-primary group-hover:bg-gold-gradient group-hover:text-accent-foreground transition-smooth">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/5 text-primary">
                 <p.icon className="h-6 w-6" />
               </div>
               <h3 className="mt-5 font-display text-xl font-semibold text-primary">{p.title}</h3>

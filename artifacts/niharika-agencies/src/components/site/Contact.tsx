@@ -14,7 +14,7 @@ const schema = z.object({
   phone: z.string().trim().min(7, "Enter a valid phone number").max(20),
   email: z.string().trim().email("Enter a valid email").max(255),
   interest: z.string().trim().max(120).optional(),
-  message: z.string().trim().min(5, "Tell us a bit more").max(1000),
+  message: z.string().trim().optional(),
 });
 
 export function Contact() {
@@ -183,14 +183,19 @@ export function Contact() {
             </div>
             <div className="space-y-2 sm:col-span-2">
               <Label htmlFor="message">Message *</Label>
-              <Textarea id="message" name="message" rows={4} required maxLength={1000} placeholder="Tell us about your requirement..." />
+              <Textarea id="message" name="message" rows={4} placeholder="Tell us about your requirement..." />
             </div>
           </div>
 
-          <Button type="submit" variant="default" size="lg" disabled={loading} className="mt-8 w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Send className="h-4 w-4" />
-            {loading ? "Sending..." : "Send Inquiry"}
-          </Button>
+          <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-5">
+            <Button type="submit" variant="default" size="lg" disabled={loading} className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Send className="h-4 w-4" />
+              {loading ? "Sending..." : "Send Inquiry"}
+            </Button>
+            <p className="text-sm text-muted-foreground italic">
+              "Every great partnership begins with a single conversation — we're looking forward to yours."
+            </p>
+          </div>
         </form>
       </div>
     </section>

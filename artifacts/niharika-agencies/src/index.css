@@ -16,6 +16,10 @@ div[style*="position:fixed"][style*="z-index:9999"] {
   pointer-events: none !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     --background: 36 38% 97%;

@@ -10,11 +10,20 @@ export function Hero() {
         <img
           src={heroImg}
           alt="Niharika Agencies FMCG distribution warehouse in Jalgaon"
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-right sm:object-center"
           width={1920}
           height={1280}
         />
-        <div className="absolute inset-0 bg-hero-gradient" />
+        {/* Mobile: top-to-bottom gradient so image shows naturally below text */}
+        <div
+          className="absolute inset-0 sm:hidden"
+          style={{
+            background:
+              "linear-gradient(to bottom, hsl(36 38% 97% / 0.97) 0%, hsl(36 38% 97% / 0.92) 45%, hsl(36 38% 97% / 0.60) 75%, hsl(36 38% 97% / 0.30) 100%)",
+          }}
+        />
+        {/* Desktop: left-to-right gradient */}
+        <div className="absolute inset-0 hidden sm:block bg-hero-gradient" />
       </div>
 
       <div className="container relative z-10 pt-28 pb-20">
@@ -39,7 +48,12 @@ export function Hero() {
                 Partner With Us <ArrowRight className="h-5 w-5" />
               </a>
             </Button>
-            <Button variant="outline" size="xl" className="border-primary/30 text-primary bg-white/50 backdrop-blur-sm hover:bg-white/80 hover:border-primary/60" asChild>
+            <Button
+              variant="outline"
+              size="xl"
+              className="border-primary/30 text-primary bg-white/50 backdrop-blur-sm hover:bg-white/80 hover:border-primary/60"
+              asChild
+            >
               <a href="#catalogue">Explore Our Network</a>
             </Button>
           </div>
