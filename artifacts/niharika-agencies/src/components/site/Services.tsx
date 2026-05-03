@@ -29,11 +29,11 @@ export function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="group relative rounded-2xl bg-card border border-border p-8 shadow-card-soft overflow-hidden"
+              className="relative rounded-2xl bg-card border border-border p-8 shadow-card-soft overflow-hidden"
             >
-              <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gold-gradient opacity-0 group-hover:opacity-20 transition-smooth" />
+              <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gold-gradient opacity-20 transition-smooth" />
               <div className="relative">
-                <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-card-soft transition-smooth group-hover:bg-gold-gradient group-hover:text-accent-foreground">
+                <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gold-gradient text-accent-foreground shadow-card-soft transition-smooth">
                   <s.icon className="h-7 w-7" />
                 </div>
                 <h3 className="mt-6 font-display text-xl font-semibold text-primary">{s.title}</h3>
