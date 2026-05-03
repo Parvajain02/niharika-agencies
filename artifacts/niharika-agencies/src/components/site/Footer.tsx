@@ -25,7 +25,7 @@ export function Footer() {
             {[
               ["About", "#about"],
               ["Brand Partners", "#brands"],
-              ["Catalogue", "#catalogue"],
+              ["Catalogue", "#brochures"],
               ["Services", "#services"],
               ["Contact", "#contact"],
             ].map(([l, h]) => (

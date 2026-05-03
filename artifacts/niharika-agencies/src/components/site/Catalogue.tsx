@@ -45,7 +45,7 @@ export function Catalogue() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
-              Product Catalogue
+              Product Categories
             </span>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl font-semibold text-primary leading-tight">
               A growing range of <span className="text-gold-gradient italic">premium FMCG products.</span>

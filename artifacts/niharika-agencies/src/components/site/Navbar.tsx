@@ -8,7 +8,7 @@ import logo from "@/assets/logo-niharika-color.png";
 const links = [
   { href: "#about", label: "About" },
   { href: "#brands", label: "Brands" },
-  { href: "#catalogue", label: "Catalogue" },
+  { href: "#brochures", label: "Catalogue" },
   { href: "#services", label: "Services" },
   { href: "#why", label: "Why Us" },
   { href: "#contact", label: "Contact" },
