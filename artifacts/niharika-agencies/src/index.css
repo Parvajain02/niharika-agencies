@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Hide Replit badge */
+/* Hide Replit badge — all known selectors */
 [data-replit-badge],
-.replit-ui-theme-root ~ div[style*="position: fixed"][style*="bottom"],
-iframe[src*="replit.com/badge"] {
+iframe[src*="replit.com"],
+div[style*="position: fixed"][style*="bottom: 16px"],
+div[style*="position: fixed"][style*="bottom:16px"],
+div[style*="position:fixed"][style*="bottom:16px"],
+div[style*="position: fixed"][style*="z-index: 9999"],
+div[style*="position:fixed"][style*="z-index:9999"] {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 @layer base {

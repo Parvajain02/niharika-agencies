@@ -120,6 +120,8 @@ export const BROCHURES: Brochure[] = [
   { brand: "Rich's", category: "Bakery & Whipping Cream", fileId: "1r1XRVAdqVolU9ilCdiQg4l9V1TEYpkS4" },
   { brand: "Sankalp", category: "Frozen Foods", fileId: "1zhIMNSNy2g-ig1-LwJy6AcD4AyNHxkc3" },
   { brand: "Weikfield", category: "Desserts & Mixes", fileId: "1pO8senjyBWAsnHbuG-32_KqDv9-EFtjn" },
+  { brand: "Gowardhan", category: "Dairy", fileId: "1ZUPl3_dbiz0UDHGv0x-HQA0Cl8oFEuY8" },
+  { brand: "Butterfly", category: "Bakery Ingredients", fileId: "1sgUmCMIreuF_x4RzeKR05qNlpdGi9eS7" },
 ].map((b) => ({
   ...b,
   viewUrl: driveView(b.fileId),

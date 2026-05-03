@@ -4,8 +4,8 @@ import founderPhoto from "@/assets/founder-nihar-jain.jpeg";
 
 const points = [
   { icon: Award, title: "Supply Chain Partner Since 1999", desc: "Over two decades powering FMCG distribution with discipline and trust." },
-  { icon: Snowflake, title: "Cold Storage Facilities", desc: "Temperature-controlled handling for dairy, frozen and perishable goods." },
-  { icon: Truck, title: "Timely Delivery, Always", desc: "Daily routing across 3 districts ensures retail shelves stay stocked." },
+  { icon: Snowflake, title: "Cold Storage Facilities", desc: "We have 5800 cubic feet of Temperature-controlled handling for dairy, frozen and perishable goods." },
+  { icon: Truck, title: "Timely Delivery, Always", desc: "With daily distribution across three districts, we ensure uninterrupted product availability, powered by our fleet of four self-owned logistics vehicles." },
   { icon: MapPin, title: "Authorized for 22+ Brands", desc: "Direct super-stockist access to India's most loved FMCG brands." },
 ];
 
@@ -25,7 +25,7 @@ export function About() {
             From a single distribution route in Jalgaon in 1999 to becoming the region's most trusted super stockist, Niharika Agencies has grown into a backbone for FMCG brands across {SITE.districts.join(", ")}.
           </p>
           <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-            We move premium consumer goods across bakery, dairy, frozen and packaging through a precision supply chain designed for speed, freshness and reliability.
+            We move premium consumer goods across bakery, dairy, frozen industries through a precision supply chain designed for speed, freshness and reliability.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -77,7 +77,7 @@ export function About() {
             <div className="lg:col-span-3 px-8 py-10 sm:px-12 sm:py-14 flex flex-col justify-center">
               <Quote className="h-8 w-8 text-accent opacity-70 mb-4" />
               <p className="font-display text-xl sm:text-2xl font-medium leading-relaxed text-primary-foreground/90 italic">
-                "We didn't just build a distribution business — we built relationships. Every brand we carry, every retailer we serve, every delivery we make is a commitment to quality and consistency."
+                "We didn't just build a distribution business, we built relationships. Every brand we carry, every customer we serve, every delivery we make is a commitment to quality, service and consistency."
               </p>
               <div className="mt-8 flex items-center gap-4 border-t border-primary-foreground/15 pt-6">
                 <div>
