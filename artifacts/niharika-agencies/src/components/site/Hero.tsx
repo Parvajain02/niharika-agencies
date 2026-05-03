@@ -10,19 +10,17 @@ export function Hero() {
         <img
           src={heroImg}
           alt="Niharika Agencies FMCG distribution warehouse in Jalgaon"
-          className="h-full w-full object-cover object-right sm:object-center"
+          className="hero-image h-full w-full object-cover object-right sm:object-center"
           width={1920}
           height={1280}
         />
-        {/* Mobile: top-to-bottom gradient so image shows naturally below text */}
         <div
           className="absolute inset-0 sm:hidden"
           style={{
             background:
-              "linear-gradient(to bottom, hsl(36 38% 97% / 0.97) 0%, hsl(36 38% 97% / 0.92) 45%, hsl(36 38% 97% / 0.60) 75%, hsl(36 38% 97% / 0.30) 100%)",
+              "linear-gradient(to bottom, hsl(36 38% 97% / 0.97) 0%, hsl(36 38% 97% / 0.92) 42%, hsl(36 38% 97% / 0.58) 76%, hsl(36 38% 97% / 0.26) 100%)",
           }}
         />
-        {/* Desktop: left-to-right gradient */}
         <div className="absolute inset-0 hidden sm:block bg-hero-gradient" />
       </div>
 

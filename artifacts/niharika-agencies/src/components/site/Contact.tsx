@@ -32,7 +32,6 @@ export function Contact() {
     }
     setLoading(true);
 
-    // 1. Save to backend
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -51,7 +50,6 @@ export function Contact() {
       return;
     }
 
-    // 2. Auto-send WhatsApp notification to the business
     const lines = [
       "*New Partnership Inquiry — Niharika Agencies*",
       "",
@@ -192,9 +190,9 @@ export function Contact() {
               <Send className="h-4 w-4" />
               {loading ? "Sending..." : "Send Inquiry"}
             </Button>
-            <p className="text-sm text-muted-foreground italic">
-              "Every great partnership begins with a single conversation — we're looking forward to yours."
-            </p>
+            <div className="text-lg sm:text-xl font-display font-semibold text-primary/90 leading-tight max-w-md">
+              Looking forward to connecting with you and building something lasting together.
+            </div>
           </div>
         </form>
       </div>
