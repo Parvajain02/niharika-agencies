@@ -54,7 +54,7 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Button variant="hero" size="xl" asChild>
               <a href="#contact">
-                Partner With Us <ArrowRight className="h-5 w-5" />
+                Start sourcing with us <ArrowRight className="h-5 w-5" />
               </a>
             </Button>
             <Button

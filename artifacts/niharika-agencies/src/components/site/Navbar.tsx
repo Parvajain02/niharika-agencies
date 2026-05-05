@@ -84,15 +84,12 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-3">
-          <a
-            href={`tel:${SITE.phoneRaw}`}
-            className={cn("flex items-center gap-2 text-sm font-medium", scrolled ? "text-foreground" : "text-primary")}
-          >
+        <div className="hidden lg:flex items-center gap-6">
+          <a href={`tel:${SITE.phoneRaw}`} className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
             <Phone className="h-4 w-4" /> {SITE.phone}
           </a>
           <Button variant="hero" size="default" asChild>
-            <a href="#contact" onClick={(e) => handleLink(e, "#contact")}>Partner With Us</a>
+            <a href="#contact" onClick={(e) => handleLink(e, "#contact")}>Start sourcing with us</a>
           </Button>
         </div>
 
@@ -131,7 +128,7 @@ export function Navbar() {
               </a>
             ))}
             <Button variant="hero" className="mt-3" asChild>
-              <a href="#contact" onClick={(e) => handleLink(e, "#contact")}>Partner With Us</a>
+              <a href="#contact" onClick={(e) => handleLink(e, "#contact")}>Start sourcing with us</a>
             </Button>
           </div>
         </div>

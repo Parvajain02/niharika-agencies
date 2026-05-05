@@ -80,7 +80,7 @@ export function Contact() {
         <div className="lg:col-span-2">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Get In Touch</span>
           <h2 className="mt-4 font-display text-4xl sm:text-5xl font-bold text-primary leading-tight">
-            Let's build a <span className="text-gold-gradient">distribution partnership.</span>
+            Let's <span className="text-gold-gradient">grow together.</span>
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
             Whether you are a retailer, a brand, or a HoReCa operator, reach out and we will respond within 24 hours.
