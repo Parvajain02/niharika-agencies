@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { SITE } from "@/data/site";
 
 export function FloatingWhatsApp() {
@@ -10,7 +10,7 @@ export function FloatingWhatsApp() {
       aria-label="Chat with Niharika Agencies on WhatsApp"
       className="fixed bottom-6 right-6 z-[9999] flex h-14 w-14 items-center justify-center rounded-full bg-gold-gradient text-accent-foreground shadow-gold hover:scale-110 transition-smooth pointer-events-auto"
     >
-      <MessageCircle className="h-6 w-6" />
+      <FaWhatsapp className="h-6 w-6" />
     </a>
   );
 }
