@@ -190,43 +190,51 @@ html, body {
 /* Mobile S - 320px and up */
 @media (min-width: 320px) {
   .category-image-container {
-    height: 380px;
+    height: 350px;
   }
 }
 
 /* Mobile M - 375px and up */
 @media (min-width: 375px) {
   .category-image-container {
-    height: 440px;
+    height: 400px;
   }
 }
 
 /* Mobile L - 425px and up */
 @media (min-width: 425px) {
   .category-image-container {
-    height: 500px;
+    height: 450px;
   }
 }
 
 /* Tablet - 768px and up */
 @media (min-width: 768px) {
   .category-image-container {
-    height: 450px;
+    height: 420px;
   }
 }
 
 /* Laptop - 1024px and up */
 @media (min-width: 1024px) {
   .category-image-container {
-    height: 420px;
+    height: 400px;
   }
 }
 
 /* Desktop - 1280px and up */
 @media (min-width: 1280px) {
   .category-image-container {
-    height: 480px;
+    height: 450px;
   }
 }
+
+/* Large Laptop / Desktop - 1440px and up */
+@media (min-width: 1440px) {
+  .category-image-container {
+    height: 500px;
+  }
+}
+
 
 
