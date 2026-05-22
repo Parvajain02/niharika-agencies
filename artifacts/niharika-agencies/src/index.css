@@ -171,3 +171,62 @@ html, body {
   .animate-fade-up { animation: fade-up 0.7s cubic-bezier(0.4, 0, 0.2, 1) both; }
   .animate-marquee { animation: marquee 35s linear infinite; }
 }
+
+/* Category Image Container Responsive Heights to prevent collage cropping */
+.category-image-container {
+  position: relative;
+  width: 100%;
+  height: 320px; /* Fallback default height */
+}
+
+/* Make image text and details sharp when downscaled */
+.category-image-container img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Mobile S - 320px and up */
+@media (min-width: 320px) {
+  .category-image-container {
+    height: 380px;
+  }
+}
+
+/* Mobile M - 375px and up */
+@media (min-width: 375px) {
+  .category-image-container {
+    height: 440px;
+  }
+}
+
+/* Mobile L - 425px and up */
+@media (min-width: 425px) {
+  .category-image-container {
+    height: 500px;
+  }
+}
+
+/* Tablet - 768px and up */
+@media (min-width: 768px) {
+  .category-image-container {
+    height: 450px;
+  }
+}
+
+/* Laptop - 1024px and up */
+@media (min-width: 1024px) {
+  .category-image-container {
+    height: 420px;
+  }
+}
+
+/* Desktop - 1280px and up */
+@media (min-width: 1280px) {
+  .category-image-container {
+    height: 480px;
+  }
+}
+
+

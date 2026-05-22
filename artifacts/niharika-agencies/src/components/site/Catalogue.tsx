@@ -79,16 +79,13 @@ export function Catalogue() {
               key={c.slug}
               className="group overflow-hidden rounded-2xl bg-card border border-border shadow-card-soft transition-smooth hover:-translate-y-1 hover:shadow-elegant"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className={cn("category-image-container flex items-center justify-center overflow-hidden transition-smooth", c.bgClass || "bg-white")}>
                 <img
                   src={c.image}
                   alt={`${c.title} from Niharika Agencies`}
                   loading="lazy"
-                  width={1024}
-                  height={768}
-                  className="h-full w-full object-cover transition-smooth group-hover:scale-105"
+                  className="h-full w-full object-contain transition-smooth group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
               </div>
               <div className="p-6">
                 <h3 className="font-display text-2xl font-semibold text-primary">{c.title}</h3>
