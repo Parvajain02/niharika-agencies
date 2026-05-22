@@ -84,7 +84,7 @@ export function Catalogue() {
                   src={c.image}
                   alt={`${c.title} from Niharika Agencies`}
                   loading="lazy"
-                  className="h-full w-full object-cover object-bottom transition-smooth group-hover:scale-105"
+                  className="h-full w-full object-contain transition-smooth group-hover:scale-105"
                 />
               </div>
               <div className="p-6">

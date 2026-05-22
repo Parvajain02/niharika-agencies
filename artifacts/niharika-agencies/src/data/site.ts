@@ -146,7 +146,7 @@ export const CATEGORIES: Category[] = [
     image: bakery,
     items: ["Bakers Yeast", "Cocoa Powder", "Chocolate Compound", "Bread Improvers", "Baking Powder"],
     brands: ["Prestige", "Butterfly", "Weikfield", "Pristine", "Dr. Oetker", "Hershey's", "Cake Decorations"],
-    bgClass: "bg-[#0a1d45]",
+    bgClass: "bg-white",
   },
   {
     slug: "icecream",
@@ -155,7 +155,7 @@ export const CATEGORIES: Category[] = [
     image: icecream,
     items: ["Stabilizers", "Emulsifiers", "Cones & Wafers", "Sundae Toppings", "Premix Bases"],
     brands: ["Milky Mist", "Gowardhan", "Rich's", "Mapro"],
-    bgClass: "bg-[#0a1d45]",
+    bgClass: "bg-white",
   },
   {
     slug: "frozen",
@@ -164,7 +164,7 @@ export const CATEGORIES: Category[] = [
     image: frozen,
     items: ["French Fries", "Frozen Snacks", "Frozen Veg", "QSR Range", "Ready-to-Cook"],
     brands: ["McCain", "Safal", "Sankalp", "Oddiville", "MI Foods"],
-    bgClass: "bg-[#0a1d45]",
+    bgClass: "bg-white",
   },
   {
     slug: "flavors",
@@ -173,7 +173,7 @@ export const CATEGORIES: Category[] = [
     image: flavors,
     items: ["Food Colors", "Essences", "Syrups", "Mocktail Bases", "Concentrates"],
     brands: ["Mapro", "Blossom", "Sarwar", "Del Monte", "Badshah"],
-    bgClass: "bg-[#0a1d45]",
+    bgClass: "bg-white",
   },
   {
     slug: "packaging",
@@ -191,6 +191,6 @@ export const CATEGORIES: Category[] = [
     image: dairy,
     items: ["Whipping Cream", "Butter", "Cheese", "Condensed Milk", "Dairy Premix"],
     brands: ["Milky Mist", "Gowardhan", "Rich's"],
-    bgClass: "bg-[#0a1d45]",
+    bgClass: "bg-white",
   },
 ];

@@ -172,11 +172,13 @@ html, body {
   .animate-marquee { animation: marquee 35s linear infinite; }
 }
 
-/* Category Image Container Responsive Heights to prevent collage cropping */
+/* Category Image Container with exact aspect ratio to prevent collage cropping */
 .category-image-container {
   position: relative;
   width: 100%;
-  height: 320px; /* Fallback default height */
+  aspect-ratio: 27 / 32; /* Matches 864x1024 exactly */
+  overflow: hidden;
+  background-color: #ffffff;
 }
 
 /* Make image text and details sharp when downscaled */
@@ -186,55 +188,3 @@ html, body {
   transform: translateZ(0);
   backface-visibility: hidden;
 }
-
-/* Mobile S - 320px and up */
-@media (min-width: 320px) {
-  .category-image-container {
-    height: 350px;
-  }
-}
-
-/* Mobile M - 375px and up */
-@media (min-width: 375px) {
-  .category-image-container {
-    height: 400px;
-  }
-}
-
-/* Mobile L - 425px and up */
-@media (min-width: 425px) {
-  .category-image-container {
-    height: 450px;
-  }
-}
-
-/* Tablet - 768px and up */
-@media (min-width: 768px) {
-  .category-image-container {
-    height: 420px;
-  }
-}
-
-/* Laptop - 1024px and up */
-@media (min-width: 1024px) {
-  .category-image-container {
-    height: 400px;
-  }
-}
-
-/* Desktop - 1280px and up */
-@media (min-width: 1280px) {
-  .category-image-container {
-    height: 450px;
-  }
-}
-
-/* Large Laptop / Desktop - 1440px and up */
-@media (min-width: 1440px) {
-  .category-image-container {
-    height: 500px;
-  }
-}
-
-
-
