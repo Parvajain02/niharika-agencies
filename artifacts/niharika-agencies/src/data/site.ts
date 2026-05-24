@@ -10,6 +10,7 @@ export const SITE = {
   mapsUrl: "https://maps.app.goo.gl/tJM2W82izNMSpVra6",
   mapsEmbedUrl: "https://www.google.com/maps?q=Niharika+Agencies+M-148+MIDC+Jalgaon&output=embed",
   districts: ["Jalgaon", "Dhule", "Nandurbar"],
+  youtubeUrl: "https://youtube.com/@niharikaagencies?si=qgkgviMWjOOmjXcj",
 };
 
 export const STATS = [
@@ -40,7 +41,8 @@ import logoMilkyMist from "@/assets/brand-milkymist.png";
 import logoDelMonte from "@/assets/brand-delmonte.png";
 import logoSankalp from "@/assets/brand-sankalp.png";
 import logoBadshah from "@/assets/brand-badshah.png";
-import logoMiFoods from "@/assets/brand-mifoods.png";
+import logoOmiFoods from "@/assets/brand-omifoods.png";
+import logoJbCo from "@/assets/brand-jbco.png";
 import logoCakeDecorations from "@/assets/brand-cakedecorations.png";
 
 export const BRANDS: { name: string; tag?: string; logo?: string }[] = [
@@ -62,7 +64,8 @@ export const BRANDS: { name: string; tag?: string; logo?: string }[] = [
   { name: "Milky Mist", logo: logoMilkyMist },
   { name: "Del Monte", logo: logoDelMonte },
   { name: "Badshah", tag: "Spices", logo: logoBadshah },
-  { name: "MI Foods", logo: logoMiFoods },
+  { name: "Omi Foods", logo: logoOmiFoods },
+  { name: "JB&Co.", tag: "Dry Fruits & Nuts", logo: logoJbCo },
   { name: "Sankalp", logo: logoSankalp },
   { name: "Cake Decorations", tag: "& Sprinkles", logo: logoCakeDecorations },
 ];
@@ -112,7 +115,8 @@ export const BROCHURES: Brochure[] = [
   { brand: "Hershey's", category: "Chocolates & Syrups", fileId: "1aexIleZdiA1ko-KhqIXD-GcLGuNAYxAz" },
   { brand: "Mapro", category: "Syrups & Jams", fileId: "1KNpNeX4n7TiieToT84zADq6ny7JE71Q_" },
   { brand: "McCain", category: "Frozen Foods", fileId: "1uni-dJ8uZGfh4jdaRJybX9JnIwF4Z0Sz" },
-  { brand: "MI Foods", category: "Frozen / Ready-to-Cook", fileId: "1P0zKuCih0cLXuF1Draqkc8RrkjcWcTxG" },
+  { brand: "Omi Foods", category: "Frozen / Ready-to-Cook", fileId: "1P0zKuCih0cLXuF1Draqkc8RrkjcWcTxG" },
+  { brand: "JB&Co.", category: "Dry Fruits & Nuts", fileId: "1kcYELy1t8c4QwHSwrvEr7d9rr5bwnhiU" },
   { brand: "Milky Mist", category: "Dairy", fileId: "1mT2lC4k75ucchBWy_amswPKJCXPxk8aO" },
   { brand: "Oddiville", category: "Foods & Frozen", fileId: "1H44qHfeVe71hIiodxcQ2Ihqm16UFlbku" },
   { brand: "Pristine", category: "Baking Solutions", fileId: "1qW5qSNuT1EHrxwE5S-Zu8UoGLzT5lnRJ" },
@@ -145,7 +149,7 @@ export const CATEGORIES: Category[] = [
     description: "Premium flours, yeasts, improvers, chocolates and bakery essentials trusted by India's top bakeries.",
     image: bakery,
     items: ["Bakers Yeast", "Cocoa Powder", "Chocolate Compound", "Bread Improvers", "Baking Powder"],
-    brands: ["Prestige", "Butterfly", "Weikfield", "Pristine", "Dr. Oetker", "Hershey's", "Cake Decorations"],
+    brands: ["Prestige", "Butterfly", "Weikfield", "Pristine", "Dr. Oetker", "Hershey's", "Cake Decorations", "JB&Co."],
     bgClass: "bg-white",
   },
   {
@@ -163,7 +167,7 @@ export const CATEGORIES: Category[] = [
     description: "End-to-end cold-chain handling for frozen snacks, vegetables and ready-to-cook QSR essentials.",
     image: frozen,
     items: ["French Fries", "Frozen Snacks", "Frozen Veg", "QSR Range", "Ready-to-Cook"],
-    brands: ["McCain", "Safal", "Sankalp", "Oddiville", "MI Foods"],
+    brands: ["McCain", "Safal", "Sankalp", "Oddiville", "Omi Foods"],
     bgClass: "bg-white",
   },
   {

@@ -1,5 +1,6 @@
-import { Mail, MapPin, Phone } from "lucide-react";
-import { SITE } from "@/data/site";
+import { Mail, MapPin, Phone, Youtube } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
+import { SITE, STATS } from "@/data/site";
 import logo from "@/assets/logo-niharika-color.png";
 
 export function Footer() {
@@ -15,8 +16,28 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-6 max-w-md text-primary-foreground/75 leading-relaxed">
-            Authorized FMCG distributor and super stockist serving {SITE.districts.join(", ")} with 22+ trusted brands and complete cold chain capabilities.
+            Authorized FMCG distributor and super stockist serving {SITE.districts.join(", ")} with {STATS.find(s => s.label === "Trusted Brands")?.value || 22}+ trusted brands and complete cold chain capabilities.
           </p>
+          <div className="mt-6 flex items-center gap-3">
+            <a 
+              href={SITE.youtubeUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-primary-foreground hover:bg-[#ff0000] hover:text-white transition-smooth border border-white/5 shadow-card-soft"
+              aria-label="Follow us on YouTube"
+            >
+              <Youtube className="h-5 w-5 fill-current" />
+            </a>
+            <a 
+              href={`https://wa.me/${SITE.phoneRaw}`} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-primary-foreground hover:bg-[#25D366] hover:text-white transition-smooth border border-white/5 shadow-card-soft"
+              aria-label="Contact us on WhatsApp"
+            >
+              <FaWhatsapp className="h-5 w-5" />
+            </a>
+          </div>
         </div>
 
         <div>

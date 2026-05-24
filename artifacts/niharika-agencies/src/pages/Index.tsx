@@ -7,6 +7,7 @@ import { Catalogue } from "@/components/site/Catalogue";
 import { Brochures } from "@/components/site/Brochures";
 import { Services } from "@/components/site/Services";
 import { WhyUs } from "@/components/site/WhyUs";
+import { YouTube } from "@/components/site/YouTube";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
@@ -23,6 +24,7 @@ const Index = () => (
       <Brochures />
       <Services />
       <WhyUs />
+      <YouTube />
       <Contact />
     </main>
     <Footer />
