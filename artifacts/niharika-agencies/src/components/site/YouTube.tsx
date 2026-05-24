@@ -57,7 +57,7 @@ export function YouTube() {
                 href={SITE.youtubeUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group relative w-full max-w-[400px] aspect-square rounded-3xl overflow-hidden shadow-elegant border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center justify-center p-8 transition-all duration-500 hover:scale-102 hover:border-[#ff0000]/30"
+                className="group relative w-full max-w-[400px] aspect-auto lg:aspect-square rounded-3xl overflow-hidden shadow-elegant border border-white/10 bg-white/5 backdrop-blur-md flex flex-col items-center justify-center py-12 px-6 sm:px-8 transition-all duration-500 hover:scale-102 hover:border-[#ff0000]/30"
               >
                 {/* Glowing Background Glows */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#ff0000]/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
