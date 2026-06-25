@@ -4,7 +4,7 @@ import trustedDistricts from "@/assets/trusted-districts.png";
 const reasons = [
   { title: "25+ Years of Reliability", desc: "A proven track record of consistent service since 1999." },
   { title: "Cold Chain Expertise", desc: "Purpose built infrastructure for temperature sensitive goods." },
-  { title: "22+ Authorized Brands", desc: "Direct access to India's most loved FMCG companies." },
+  { title: "23+ Authorized Brands", desc: "Direct access to India's most loved FMCG companies." },
   { title: "Hyper Local Reach", desc: "Daily delivery routes across 3 districts and 300+ retailers." },
   { title: "Transparent Operations", desc: "GST compliant invoicing, traceable batches and sealed deliveries." },
   { title: "Dedicated Account Support", desc: "A personal point of contact for every retailer and partner." },

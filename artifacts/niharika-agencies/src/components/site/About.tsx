@@ -6,7 +6,7 @@ const points = [
   { icon: Award, title: "Supply Chain Partner Since 1999", desc: "Over two decades powering FMCG distribution with discipline and trust." },
   { icon: Snowflake, title: "Cold Storage Facilities", desc: "We have 5800 cubic feet of Temperature-controlled handling for dairy, frozen and perishable goods." },
   { icon: Truck, title: "Timely Delivery, Always", desc: "With daily distribution across three districts, we ensure uninterrupted product availability, powered by our fleet of four self-owned logistics vehicles." },
-  { icon: MapPin, title: "Authorized for 22+ Brands", desc: "Direct super-stockist access to India's most loved FMCG brands." },
+  { icon: MapPin, title: "Authorized for 23+ Brands", desc: "Direct super-stockist access to India's most loved FMCG brands." },
 ];
 
 export function About() {

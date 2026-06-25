@@ -48,7 +48,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-6 max-w-xl text-lg sm:text-xl text-foreground/70 leading-relaxed font-light">
-            Super stockist and authorized distributor for 22+ leading consumer brands across {SITE.districts.join(", ")}, backed by cold chain logistics and 25 years of trust.
+            Super stockist and authorized distributor for 23+ leading consumer brands across {SITE.districts.join(", ")}, backed by cold chain logistics and 25 years of trust.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -69,7 +69,7 @@ export function Hero() {
 
           <div className="mt-14 grid grid-cols-3 gap-6 max-w-lg border-t border-primary/15 pt-8">
             {[
-              { v: "22+", l: "Brands" },
+              { v: "23+", l: "Brands" },
               { v: "300+", l: "Retailers" },
               { v: "25+", l: "Years" },
             ].map((s) => (

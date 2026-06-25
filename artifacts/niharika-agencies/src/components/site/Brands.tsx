@@ -13,7 +13,7 @@ export function Brands() {
             Trusted by the <span className="text-gold-gradient italic">brands you love.</span>
           </h2>
           <p className="mt-5 text-primary-foreground/75 text-lg">
-            Authorized distributor and super stockist for 22+ leading FMCG companies across food, dairy, frozen and bakery categories.
+            Authorized distributor and super stockist for 23+ leading FMCG companies across food, dairy, frozen and bakery categories.
           </p>
         </div>
       </div>

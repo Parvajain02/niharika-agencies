@@ -1,7 +1,7 @@
 import { Truck, Snowflake, Warehouse, ShieldCheck, Users, Clock } from "lucide-react";
 
 const services = [
-  { icon: Warehouse, title: "Super Stockist & Distribution", desc: "Authorized super stockist for 22+ leading FMCG brands across the region." },
+  { icon: Warehouse, title: "Super Stockist & Distribution", desc: "Authorized super stockist for 23+ leading FMCG brands across the region." },
   { icon: Snowflake, title: "Cold Chain Logistics", desc: "We have 5800 cubic feet of Temperature-controlled handling for last mile delivery of dairy, frozen and perishable goods." },
   { icon: Truck, title: "Last Mile Delivery", desc: "With daily distribution across three districts, we ensure uninterrupted product availability, powered by our fleet of four self-owned logistics vehicles." },
   { icon: Users, title: "HoReCa Supply", desc: "Specialised supply for hotels, restaurants, cafes and bakeries." },

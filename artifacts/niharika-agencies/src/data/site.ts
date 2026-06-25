@@ -15,7 +15,7 @@ export const SITE = {
 
 export const STATS = [
   { value: 3, suffix: "", label: "Districts Covered" },
-  { value: 22, suffix: "+", label: "Trusted Brands" },
+  { value: 23, suffix: "+", label: "Trusted Brands" },
   { value: 25, suffix: "+", label: "Years of Trust" },
   { value: 80, suffix: "+", label: "Sub-Distributors" },
   { value: 100, suffix: "+", label: "Bakeries Served" },
@@ -44,6 +44,7 @@ import logoBadshah from "@/assets/brand-badshah.png";
 import logoOmiFoods from "@/assets/brand-omifoods.png";
 import logoJbCo from "@/assets/brand-jbco.png";
 import logoCakeDecorations from "@/assets/brand-cakedecorations.png";
+import logoNilons from "@/assets/brand-nilons.png";
 
 export const BRANDS: { name: string; tag?: string; logo?: string }[] = [
   { name: "Prestige", tag: "Bakers Yeast", logo: logoPrestige },
@@ -68,6 +69,7 @@ export const BRANDS: { name: string; tag?: string; logo?: string }[] = [
   { name: "JB&Co.", tag: "Dry Fruits & Nuts", logo: logoJbCo },
   { name: "Sankalp", logo: logoSankalp },
   { name: "Cake Decorations", tag: "& Sprinkles", logo: logoCakeDecorations },
+  { name: "Nilon's", tag: "Pickles & Spices", logo: logoNilons },
 ];
 
 export const BRAND_LOGO_MAP: Record<string, string> = Object.fromEntries(
@@ -126,6 +128,7 @@ export const BROCHURES: Brochure[] = [
   { brand: "Weikfield", category: "Desserts & Mixes", fileId: "1pO8senjyBWAsnHbuG-32_KqDv9-EFtjn" },
   { brand: "Gowardhan", category: "Dairy", fileId: "1ZUPl3_dbiz0UDHGv0x-HQA0Cl8oFEuY8" },
   { brand: "Butterfly", category: "Bakery Ingredients", fileId: "1sgUmCMIreuF_x4RzeKR05qNlpdGi9eS7" },
+  { brand: "Nilon's", category: "Pickles & Spices", fileId: "16hZVSs1ZuGxfTioRlCzs1aQQTi6Qhxq0" },
 ].map((b) => ({
   ...b,
   viewUrl: driveView(b.fileId),
@@ -176,7 +179,7 @@ export const CATEGORIES: Category[] = [
     description: "Vibrant food-grade colors, syrups and concentrated flavours for bakery, beverage and dessert use.",
     image: flavors,
     items: ["Food Colors", "Essences", "Syrups", "Mocktail Bases", "Concentrates"],
-    brands: ["Mapro", "Blossom", "Sarwar", "Del Monte", "Badshah"],
+    brands: ["Mapro", "Blossom", "Sarwar", "Del Monte", "Badshah", "Nilon's"],
     bgClass: "bg-white",
   },
   {
